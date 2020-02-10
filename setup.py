@@ -8,7 +8,7 @@ from setuptools.command.test import test as TestCommand
 
 setup(
     name='event_sourcing',
-    version='1.0.0',
+    version='1.0.2',
     description='Event Source Implementation',
     author='BRMED',
     author_email='desenvolvimento@',
