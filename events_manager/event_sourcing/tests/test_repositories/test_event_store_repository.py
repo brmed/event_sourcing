@@ -1,20 +1,18 @@
 from django.test import TestCase
 
-from event_sourcing.repositories import EventStoreRepository
-from event_sourcing.domain import TrackedObject
-from event_sourcing.models import (
+from events_manager.event_sourcing.repositories import EventStoreRepository
+from events_manager.event_sourcing.domain import TrackedObject
+from events_manager.event_sourcing.models import (
     Event,
     EventStore,
 )
-
-from django.contrib.auth import get_user_model
 
 from model_mommy import mommy
 import mock
 
 import datetime
 
-UserModel = get_user_model()
+from django.contrib.auth.models import User as UserModel
 
 
 class EventStoreRepositoryTestCase(TestCase):

@@ -1,4 +1,4 @@
-from event_sourcing.use_cases.register_tracked_object_event import (
+from events_manager.event_sourcing.use_cases.register_tracked_object_event import (
     RegisterTrackedObjectEvent
 )
 

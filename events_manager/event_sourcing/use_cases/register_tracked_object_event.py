@@ -1,8 +1,8 @@
-from event_sourcing.repositories import EventStoreRepository
-from event_sourcing.factories import EventStoreFactory
+from events_manager.event_sourcing.repositories import EventStoreRepository
+from events_manager.event_sourcing.factories import EventStoreFactory
 from django.utils import timezone
 
-from event_sourcing.domain import TrackedObject
+from events_manager.event_sourcing.domain import TrackedObject
 
 
 class RegisterTrackedObjectEvent:

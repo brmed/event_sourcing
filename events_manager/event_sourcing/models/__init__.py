@@ -1,5 +1,5 @@
-from event_sourcing.models.event_store import EventStore
-from event_sourcing.models.event import Event
+from events_manager.event_sourcing.models.event_store import EventStore
+from events_manager.event_sourcing.models.event import Event
 
 
 __all__ = [

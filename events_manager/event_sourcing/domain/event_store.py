@@ -1,7 +1,7 @@
 import attr
 import typing
-from event_sourcing.domain.tracked_object import TrackedObject
-from event_sourcing.domain.event import Event
+from events_manager.event_sourcing.domain.tracked_object import TrackedObject
+from events_manager.event_sourcing.domain.event import Event
 
 
 @attr.s(auto_attribs=True, cmp=False, repr=False, kw_only=True)

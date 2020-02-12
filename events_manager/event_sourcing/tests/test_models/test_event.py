@@ -1,6 +1,6 @@
 from django.test import TestCase
 from model_mommy import mommy
-from event_sourcing.models import Event
+from events_manager.event_sourcing.models import Event
 
 
 class EventModelTestCase(TestCase):

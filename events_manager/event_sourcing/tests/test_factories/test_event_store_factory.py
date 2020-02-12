@@ -3,22 +3,20 @@ from model_mommy import mommy
 import mock
 import datetime
 
-from event_sourcing.models import (
+from events_manager.event_sourcing.models import (
     EventStore as EventStoreModel,
     Event as EventModel
 )
 
-from event_sourcing.domain import (
+from events_manager.event_sourcing.domain import (
     EventStore as EventStoreDomain,
     Event as EventDomain,
     TrackedObject,
 )
 
-from event_sourcing.factories import EventStoreFactory
+from events_manager.event_sourcing.factories import EventStoreFactory
 
-from django.contrib.auth import get_user_model
-
-UserModel = get_user_model()
+from django.contrib.auth.models import User as UserModel  
 
 
 class EventStoreFactoryTestCase(TestCase):
@@ -97,7 +95,7 @@ class EventStoreFactoryTestCase(TestCase):
     def test_build_event_from_tracked_object(self):
         tracked_object = TrackedObject(
             object_id=20,
-            module='apps.event_sourcing.domain',
+            module='apps.events_manager.event_sourcing.domain',
             signature='TrackedObject',
         )
 
@@ -118,7 +116,7 @@ class EventStoreFactoryTestCase(TestCase):
             event_domain.state,
             dict(
                 object_id=20,
-                module='apps.event_sourcing.domain',
+                module='apps.events_manager.event_sourcing.domain',
                 signature='TrackedObject',
             )
         )

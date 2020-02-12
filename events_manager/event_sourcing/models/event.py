@@ -1,12 +1,9 @@
 from django.db import models
-from django.contrib.auth import get_user_model
-from lib.framework.models.base_model import BaseModel
-from django.contrib.postgres.fields import JSONField
-from event_sourcing.models.event_store import EventStore
-
 import datetime
-
-User = get_user_model()
+from .base_model import BaseModel
+from django.contrib.postgres.fields import JSONField
+from events_manager.event_sourcing.models.event_store import EventStore
+from django.contrib.auth.models import User  
 
 
 class Event(BaseModel):

@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from event_sourcing.domain import Event
+from events_manager.event_sourcing.domain import Event
 import datetime
 import mock
 

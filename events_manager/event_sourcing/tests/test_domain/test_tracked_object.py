@@ -1,6 +1,6 @@
 from django.test import TestCase
 
-from event_sourcing.domain import (
+from events_manager.event_sourcing.domain import (
     TrackedObject
 )
 

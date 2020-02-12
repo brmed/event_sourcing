@@ -1,4 +1,4 @@
-from event_sourcing.repositories.event_store_repository import (
+from events_manager.event_sourcing.repositories.event_store_repository import (
     EventStoreRepository
 )
 

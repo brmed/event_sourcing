@@ -1,8 +1,8 @@
 from django.test import TestCase
 
-from event_sourcing.use_cases import RegisterTrackedObjectEvent
+from events_manager.event_sourcing.use_cases import RegisterTrackedObjectEvent
 
-from event_sourcing.domain import TrackedObject
+from events_manager.event_sourcing.domain import TrackedObject
 
 import mock
 

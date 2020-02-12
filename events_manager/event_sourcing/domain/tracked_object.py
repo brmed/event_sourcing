@@ -1,6 +1,6 @@
 import attr
 
-from event_sourcing.json_utils import SerializableDict
+from events_manager.event_sourcing.json_utils import SerializableDict
 
 
 @attr.s(auto_attribs=True, cmp=False, repr=False)

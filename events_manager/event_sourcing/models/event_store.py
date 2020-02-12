@@ -1,5 +1,5 @@
 from django.db import models
-from lib.framework.models.base_model import BaseModel
+from .base_model import BaseModel
 
 
 class EventStore(BaseModel):

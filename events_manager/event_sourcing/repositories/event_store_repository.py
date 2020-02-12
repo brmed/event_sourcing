@@ -1,9 +1,9 @@
-from event_sourcing.models import (
+from events_manager.event_sourcing.models import (
     EventStore as EventStoreModel,
     Event as EventModel,
 )
 
-from event_sourcing.factories import EventStoreFactory
+from events_manager.event_sourcing.factories import EventStoreFactory
 
 
 class EventStoreRepository:

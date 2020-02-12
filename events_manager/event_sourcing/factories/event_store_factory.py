@@ -1,8 +1,10 @@
-from event_sourcing.domain import (
+from events_manager.event_sourcing.domain import (
     EventStore,
     Event,
     TrackedObject,
 )
+
+from django.contrib.auth.models import User
 
 
 class EventStoreFactory:
@@ -41,13 +43,13 @@ class EventStoreFactory:
 
         attributes['name'] = event_model.name
         attributes['date'] = event_model.date
-        attributes['user'] = {
-            'username': event_model.username,
-            'email': event_model.email,
-            'first_name': event_model.first_name,
-            'last_name': event_model.last_name,
-            'id': event_model.id
-        }
+        attributes['user'] = User(
+            username = event_model.user.username,
+            email = event_model.user.email,
+            first_name = event_model.user.first_name,
+            last_name = event_model.user.last_name,
+            id = event_model.user.id
+        )
         attributes['state'] = event_model.state
         attributes['diff'] = event_model.diff
 
