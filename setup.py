@@ -28,7 +28,7 @@ class Tox(TestCommand):
 
 setup(
     name='events_manager',
-    version='1.2.1',
+    version='1.2.2',
     description='Event Source Implementation',
     author='BRMED',
     author_email='desenvolvimento@grupobrmed.com.br',
