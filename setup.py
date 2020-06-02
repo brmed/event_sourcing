@@ -28,13 +28,13 @@ class Tox(TestCommand):
 
 setup(
     name='events_manager',
-    version='1.2.0',
+    version='1.2.1',
     description='Event Source Implementation',
     author='BRMED',
     author_email='desenvolvimento@grupobrmed.com.br',
     url='https://github.com/brmed/events_manager.git',
     packages=find_packages(),
-    install_requires=['Django>=1.9', 'python-dateutil==2.6.1', 'attrs==18.2.0', 'psycopg2>=2.8.4'],
+    install_requires=['Django>=1.9', 'python-dateutil==2.6.1', 'attrs>=18.2.0'],
     tests_require=['tox>=3.14.0', 'virtualenv>=1.11.2'],
     cmdclass = {'test': Tox},
 )
