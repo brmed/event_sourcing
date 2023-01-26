@@ -1,7 +1,7 @@
 from django.db import models
 import datetime
 from .base_model import BaseModel
-from django.contrib.postgres.fields import JSONField
+from django.db.models import JSONField
 from events_manager.event_sourcing.models.event_store import EventStore
 from django.contrib.auth.models import User  
 

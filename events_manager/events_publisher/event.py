@@ -9,7 +9,7 @@ class Event:
 
     def __new__(cls, *args, **kwargs):
         if not cls.__signals.get(cls):
-            cls.__signals[cls] = Signal(providing_args=[])
+            cls.__signals[cls] = Signal()
         cls.signal = cls.__signals[cls]
         return super().__new__(cls)
 
