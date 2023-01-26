@@ -1,5 +1,6 @@
 from django.dispatch import Signal
 from django.conf import settings
+import logging
 
 
 class Event:
@@ -23,6 +24,11 @@ class Event:
         else:
             response = self.signal.send_robust(
                 sender=self.__class__, **self.kwargs)
+
+        for receiver, response_item in response:
+            if isinstance(response_item, Exception):
+                logger = logging.getLogger('events_manager')
+                logger.error(f'Events manager error: {str(response_item)}', exc_info=response_item)
         return response
 
     def connect_signal(self, handler):
